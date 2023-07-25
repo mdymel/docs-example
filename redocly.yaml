@@ -1,0 +1,30 @@
+extends:
+  - recommended
+
+apis:
+  myApi@v1:
+    root: ./swagger.json
+    rules:
+      no-ambiguous-paths: error
+
+theme:
+  openapi:
+    sidebarLinks:
+      beforeInfo:
+        - label: "Docs portal home"
+          link: "../"
+        - label: "Introduction"
+          link: "../introduction"
+    schemaExpansionLevel: 2
+    generateCodeSamples:
+      languages:
+        - lang: curl
+    hideHostname: true
+    expandResponses: "200"
+    expandDefaultResponse: true
+    theme:
+      logo:
+        gutter: "30px"
+      sidebar:
+        backgroundColor: "#0f172a"
+        textColor: "#fff"
